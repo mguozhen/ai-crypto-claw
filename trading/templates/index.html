@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Dashboard — Grid Bot{% endblock %}
+{% block content %}
+
+<div hx-get="/api/accounts" hx-trigger="load, every 60s" hx-swap="innerHTML" id="accounts-container">
+    <p>Loading...</p>
+</div>
+
+{% endblock %}

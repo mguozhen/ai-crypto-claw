@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+{% block title %}{{ '编辑' if edit_mode else '创建' }}用户 — Grid Bot{% endblock %}
+{% block content %}
+
+<h4>{{ '✏️ 编辑用户' if edit_mode else '➕ 创建新用户' }}</h4>
+
+{% if error %}
+<p style="color: #ef4444;">{{ error }}</p>
+{% endif %}
+
+<form method="POST">
+    <h5>基本信息</h5>
+    <div class="grid">
+        <label>用户名 <input type="text" name="username" value="{{ user.username if edit_mode else '' }}" {% if edit_mode %}readonly{% endif %} required></label>
+        <label>显示名 <input type="text" name="display_name" value="{{ user.display_name if edit_mode else '' }}"></label>
+    </div>
+    <div class="grid">
+        <label>密码 {{ '(留空不修改)' if edit_mode else '' }} <input type="password" name="password" {% if not edit_mode %}required{% endif %}></label>
+    </div>
+
+    <h5>Telegram Bot</h5>
+    <label>Bot Token <small>（从 @BotFather 获取）</small>
+        <input type="text" name="bot_token" placeholder="123456:ABC-DEF..." value="{{ '[已配置]' if edit_mode and user.telegram_bot_token_enc else '' }}">
+    </label>
+
+    <h5>OKX 交易账号</h5>
+    <div class="grid">
+        <label>API Key <input type="text" name="okx_api_key" placeholder="{{ '[已配置]' if edit_mode else '' }}"></label>
+        <label>Secret Key <input type="text" name="okx_secret" placeholder="{{ '[已配置]' if edit_mode else '' }}"></label>
+    </div>
+    <div class="grid">
+        <label>Passphrase <input type="text" name="okx_passphrase" placeholder="{{ '[已配置]' if edit_mode else '' }}"></label>
+        <label>模式
+            <select name="demo_mode">
+                <option value="0" {% if edit_mode and not acct_demo %}selected{% endif %}>实盘 (LIVE)</option>
+                <option value="1" {% if not edit_mode or acct_demo %}selected{% endif %}>模拟 (DEMO)</option>
+            </select>
+        </label>
+    </div>
+
+    <h5>策略配置</h5>
+    <details>
+        <summary>BTC 网格参数</summary>
+        <div class="grid">
+            <label>下限价格 <input type="number" name="btc_lower" value="{{ config.btc_grid.lower_price if config else 62000 }}"></label>
+            <label>上限价格 <input type="number" name="btc_upper" value="{{ config.btc_grid.upper_price if config else 90000 }}"></label>
+        </div>
+        <div class="grid">
+            <label>网格数量 <input type="number" name="btc_grids" value="{{ config.btc_grid.grid_count if config else 10 }}"></label>
+            <label>每格金额 (USDT) <input type="number" name="btc_order_size" value="{{ config.btc_grid.order_size_usdt if config else 50 }}"></label>
+        </div>
+        <label>止损价格 <input type="number" name="btc_stop" value="{{ config.btc_grid.stop_loss_price if config else 55000 }}"></label>
+    </details>
+
+    <details>
+        <summary>ETH 网格参数</summary>
+        <div class="grid">
+            <label>下限价格 <input type="number" name="eth_lower" value="{{ config.eth_grid.lower_price if config else 1800 }}"></label>
+            <label>上限价格 <input type="number" name="eth_upper" value="{{ config.eth_grid.upper_price if config else 3000 }}"></label>
+        </div>
+        <div class="grid">
+            <label>网格数量 <input type="number" name="eth_grids" value="{{ config.eth_grid.grid_count if config else 10 }}"></label>
+            <label>每格金额 (USDT) <input type="number" name="eth_order_size" value="{{ config.eth_grid.order_size_usdt if config else 30 }}"></label>
+        </div>
+        <label>止损价格 <input type="number" name="eth_stop" value="{{ config.eth_grid.stop_loss_price if config else 1600 }}"></label>
+    </details>
+
+    <details>
+        <summary>DCA 定投参数</summary>
+        <div class="grid">
+            <label>BTC 日投 (USDT) <input type="number" name="dca_btc" value="{{ config.dca.positions[0].amount_usdt if config else 10 }}"></label>
+            <label>ETH 日投 (USDT) <input type="number" name="dca_eth" value="{{ config.dca.positions[1].amount_usdt if config else 6 }}"></label>
+        </div>
+    </details>
+
+    <button type="submit" style="margin-top:1rem;">{{ '保存修改' if edit_mode else '创建用户' }}</button>
+</form>
+
+<p><a href="/admin/users">← 返回用户列表</a></p>
+
+{% endblock %}

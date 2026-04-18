@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}命令日志 — Grid Bot{% endblock %}
+{% block content %}
+
+<h4>📋 Telegram 命令日志</h4>
+
+{% if logs %}
+<table>
+    <thead><tr><th>时间</th><th>用户</th><th>命令</th><th>参数</th><th>结果</th></tr></thead>
+    <tbody>
+    {% for l in logs %}
+    <tr>
+        <td>{{ l.created_at[:16] if l.created_at else '-' }}</td>
+        <td>{{ l.username }}</td>
+        <td><code>{{ l.command }}</code></td>
+        <td>{{ l.args or '-' }}</td>
+        <td>{{ l.result or '-' }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<p style="color:var(--pico-muted-color);">暂无命令记录</p>
+{% endif %}
+
+<p><a href="/">← 返回概览</a></p>
+
+{% endblock %}

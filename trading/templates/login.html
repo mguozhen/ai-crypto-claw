@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login — Grid Bot</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+</head>
+<body>
+    <main class="container" style="max-width: 400px; margin-top: 15vh;">
+        <article>
+            <h3 style="text-align:center;">🔐 Grid Bot</h3>
+            {% if error %}
+            <p style="color: #ef4444; text-align:center;">用户名或密码错误</p>
+            {% endif %}
+            <form method="POST" action="/login">
+                <input type="text" name="username" placeholder="用户名" autofocus required>
+                <input type="password" name="password" placeholder="密码" required>
+                <button type="submit">登录</button>
+            </form>
+        </article>
+    </main>
+</body>
+</html>

@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block title %}Account #{{ acct.id }} — Grid Bot{% endblock %}
+{% block content %}
+
+<h4>
+    #{{ acct.id }} {{ acct.name }}
+    {% if acct.is_main %}<span class="tag tag-main">主账号</span>{% endif %}
+    {% if acct.demo_mode %}<span class="tag tag-demo">DEMO</span>{% else %}<span class="tag tag-live">LIVE</span>{% endif %}
+</h4>
+
+<div class="card">
+    <div class="stat"><div class="stat-label">USDT</div><div class="stat-value">{{ "%.2f"|format(balance.usdt) }}</div></div>
+    <div class="stat"><div class="stat-label">BTC</div><div class="stat-value">{{ "%.6f"|format(balance.btc) }}</div></div>
+    <div class="stat"><div class="stat-label">ETH</div><div class="stat-value">{{ "%.6f"|format(balance.eth) }}</div></div>
+    <div class="stat"><div class="stat-label">总价值</div><div class="stat-value">${{ "%.2f"|format(balance.total) }}</div></div>
+</div>
+
+<h5>挂单 ({{ orders|length }})</h5>
+{% if orders %}
+<table>
+    <thead><tr><th>交易对</th><th>方向</th><th>价格</th><th>数量</th><th>时间</th></tr></thead>
+    <tbody>
+    {% for o in orders %}
+    <tr>
+        <td>{{ o.symbol }}</td>
+        <td>{% if o.side == 'buy' %}<span class="green">BUY</span>{% else %}<span class="red">SELL</span>{% endif %}</td>
+        <td>${{ "%.2f"|format(o.price) }}</td>
+        <td>{{ "%.6f"|format(o.amount) }}</td>
+        <td>{{ o.datetime[:16] if o.datetime else '-' }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<p style="color:var(--pico-muted-color);">无挂单</p>
+{% endif %}
+
+<h5>最近交易</h5>
+{% if trades %}
+<table>
+    <thead><tr><th>策略</th><th>交易对</th><th>方向</th><th>价格</th><th>金额</th><th>时间</th></tr></thead>
+    <tbody>
+    {% for t in trades %}
+    <tr>
+        <td>{{ t.strategy }}</td>
+        <td>{{ t.symbol }}</td>
+        <td>{% if t.side == 'buy' %}<span class="green">BUY</span>{% else %}<span class="red">SELL</span>{% endif %}</td>
+        <td>${{ "%.2f"|format(t.price) }}</td>
+        <td>${{ "%.2f"|format(t.cost) }}</td>
+        <td>{{ t.created_at[:16] if t.created_at else '-' }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<p style="color:var(--pico-muted-color);">暂无交易记录</p>
+{% endif %}
+
+<p><a href="/">← 返回概览</a></p>
+
+{% endblock %}

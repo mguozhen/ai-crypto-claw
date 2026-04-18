@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block title %}我的账户 — Grid Bot{% endblock %}
+{% block content %}
+
+<h4>👋 {{ user.display_name or user.username }}</h4>
+
+{% for acct in accounts %}
+<div class="card">
+    <div style="margin-bottom:0.8rem;">
+        <strong>{{ acct.name }}</strong>
+        {% if acct.demo_mode %}<span class="tag tag-demo">DEMO</span>{% else %}<span class="tag tag-live">LIVE</span>{% endif %}
+    </div>
+    {% if acct.balance %}
+    <div>
+        <div class="stat"><div class="stat-label">USDT</div><div class="stat-value">{{ "%.2f"|format(acct.balance.usdt) }}</div></div>
+        <div class="stat"><div class="stat-label">BTC</div><div class="stat-value">{{ "%.4f"|format(acct.balance.btc) }}</div></div>
+        <div class="stat"><div class="stat-label">ETH</div><div class="stat-value">{{ "%.4f"|format(acct.balance.eth) }}</div></div>
+        <div class="stat"><div class="stat-label">总价值</div><div class="stat-value">${{ "%.2f"|format(acct.balance.total) }}</div></div>
+    </div>
+    {% else %}
+    <p style="color:var(--pico-muted-color);">余额加载失败</p>
+    {% endif %}
+    <div style="margin-top:0.5rem; font-size:0.8rem; color:var(--pico-muted-color);">
+        交易: {{ acct.stats.total_trades }} | 网格: {{ acct.stats.grid_fills }} | DCA: ${{ "%.0f"|format(acct.stats.dca_total_usdt) }}
+    </div>
+</div>
+{% endfor %}
+
+{% if not accounts %}
+<p>暂无绑定的交易账号。请联系管理员配置。</p>
+{% endif %}
+
+<h5>最近交易</h5>
+{% if trades %}
+<table>
+    <thead><tr><th>策略</th><th>交易对</th><th>方向</th><th>价格</th><th>金额</th><th>时间</th></tr></thead>
+    <tbody>
+    {% for t in trades %}
+    <tr>
+        <td>{{ t.strategy }}</td>
+        <td>{{ t.symbol }}</td>
+        <td>{% if t.side == 'buy' %}<span class="green">BUY</span>{% else %}<span class="red">SELL</span>{% endif %}</td>
+        <td>${{ "%.2f"|format(t.price) }}</td>
+        <td>${{ "%.2f"|format(t.cost) }}</td>
+        <td>{{ t.created_at[:16] if t.created_at else '-' }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<p style="color:var(--pico-muted-color);">暂无交易记录</p>
+{% endif %}
+
+<h5>⚙️ 当前策略</h5>
+{% if config %}
+<div class="card" style="font-size:0.85rem;">
+    <strong>BTC 网格:</strong> ${{ config.btc_grid.lower_price|int }}-${{ config.btc_grid.upper_price|int }}, {{ config.btc_grid.grid_count }}格, 每格${{ config.btc_grid.order_size_usdt }}<br>
+    <strong>ETH 网格:</strong> ${{ config.eth_grid.lower_price|int }}-${{ config.eth_grid.upper_price|int }}, {{ config.eth_grid.grid_count }}格, 每格${{ config.eth_grid.order_size_usdt }}<br>
+    <strong>DCA:</strong> BTC ${{ config.dca.positions[0].amount_usdt }}/天, ETH ${{ config.dca.positions[1].amount_usdt }}/天
+</div>
+{% else %}
+<p style="color:var(--pico-muted-color);">使用默认策略</p>
+{% endif %}
+
+{% endblock %}

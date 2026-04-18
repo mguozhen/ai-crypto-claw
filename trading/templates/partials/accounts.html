@@ -1,0 +1,56 @@
+<div style="text-align:right; margin-bottom:0.5rem; font-size:0.8rem; color:var(--pico-muted-color);">
+    最后更新: {{ updated_at }} | <span hx-get="/api/accounts" hx-trigger="click" hx-target="#accounts-container" style="cursor:pointer; text-decoration:underline;">刷新</span>
+</div>
+
+<div class="card" style="background: linear-gradient(135deg, #1e293b, #334155); color: white; border: none;">
+    <div class="stat">
+        <div class="stat-label" style="color:#94a3b8;">总资产</div>
+        <div class="stat-value">${{ "%.2f"|format(grand_total) }}</div>
+    </div>
+    <div class="stat">
+        <div class="stat-label" style="color:#94a3b8;">账号数</div>
+        <div class="stat-value">{{ accounts|length }}</div>
+    </div>
+    <div class="stat">
+        <div class="stat-label" style="color:#94a3b8;">BTC</div>
+        <div class="stat-value">${{ "%.0f"|format(btc_price) }}</div>
+    </div>
+    <div class="stat">
+        <div class="stat-label" style="color:#94a3b8;">ETH</div>
+        <div class="stat-value">${{ "%.0f"|format(eth_price) }}</div>
+    </div>
+</div>
+
+{% for acct in accounts %}
+<div class="card">
+    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:0.8rem;">
+        <div>
+            <strong>#{{ acct.id }} {{ acct.name }}</strong>
+            {% if acct.is_main %}<span class="tag tag-main">主账号</span>{% endif %}
+            {% if acct.demo_mode %}<span class="tag tag-demo">DEMO</span>{% else %}<span class="tag tag-live">LIVE</span>{% endif %}
+        </div>
+        <a href="/account/{{ acct.id }}" style="font-size:0.85rem;">详情 →</a>
+    </div>
+    <div>
+        <div class="stat">
+            <div class="stat-label">USDT</div>
+            <div class="stat-value">{{ "%.2f"|format(acct.usdt) }}</div>
+        </div>
+        <div class="stat">
+            <div class="stat-label">BTC</div>
+            <div class="stat-value">{{ "%.4f"|format(acct.btc) }}</div>
+        </div>
+        <div class="stat">
+            <div class="stat-label">ETH</div>
+            <div class="stat-value">{{ "%.4f"|format(acct.eth) }}</div>
+        </div>
+        <div class="stat">
+            <div class="stat-label">总价值</div>
+            <div class="stat-value">${{ "%.2f"|format(acct.total) }}</div>
+        </div>
+    </div>
+    <div style="margin-top:0.5rem; font-size:0.8rem; color:var(--pico-muted-color);">
+        交易: {{ acct.stats.total_trades }} | 网格成交: {{ acct.stats.grid_fills }} | DCA: ${{ "%.0f"|format(acct.stats.dca_total_usdt) }}
+    </div>
+</div>
+{% endfor %}

@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}用户管理 — Grid Bot{% endblock %}
+{% block content %}
+
+<div style="display:flex; justify-content:space-between; align-items:center;">
+    <h4>👥 用户管理</h4>
+    <a href="/admin/users/new" role="button">+ 创建用户</a>
+</div>
+
+{% if users %}
+<table>
+    <thead>
+        <tr><th>ID</th><th>用户名</th><th>显示名</th><th>角色</th><th>账号数</th><th>Bot</th><th>状态</th><th>操作</th></tr>
+    </thead>
+    <tbody>
+    {% for u in users %}
+    <tr>
+        <td>{{ u.id }}</td>
+        <td><strong>{{ u.username }}</strong></td>
+        <td>{{ u.display_name or '-' }}</td>
+        <td>{% if u.is_admin %}<span class="tag tag-main">Admin</span>{% else %}User{% endif %}</td>
+        <td>{{ u.account_count }}</td>
+        <td>{% if u.telegram_bot_token_enc %}✅{% else %}❌{% endif %}</td>
+        <td>{% if u.is_active %}🟢{% else %}🔴{% endif %}</td>
+        <td>
+            <a href="/admin/users/{{ u.id }}/edit" style="font-size:0.85rem;">编辑</a>
+            {% if not u.is_admin %}
+            | <a href="/admin/users/{{ u.id }}/delete" style="font-size:0.85rem; color:#ef4444;" onclick="return confirm('确认停用?')">停用</a>
+            {% endif %}
+        </td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<p>暂无用户。</p>
+{% endif %}
+
+{% endblock %}
