@@ -1,0 +1,38 @@
+agents:
+  technicals:
+    role: "Technical Analyst"
+    layer: 0
+    timeout: 30
+
+  derivatives:
+    role: "Derivatives Specialist"
+    layer: 0
+    timeout: 30
+
+  tail_risk:
+    role: "Tail Risk Analyst"
+    layer: 0
+    timeout: 30
+
+  reflection:
+    role: "Reflection Analyst"
+    layer: 0
+    timeout: 30
+
+  bull_researcher:
+    role: "Bull Researcher"
+    layer: 1
+    depends_on: [technicals, derivatives, tail_risk, reflection]
+    timeout: 45
+
+  bear_researcher:
+    role: "Bear Researcher"
+    layer: 1
+    depends_on: [technicals, derivatives, tail_risk, reflection]
+    timeout: 45
+
+  portfolio_manager:
+    role: "Portfolio Manager"
+    layer: 2
+    depends_on: [bull_researcher, bear_researcher]
+    timeout: 60

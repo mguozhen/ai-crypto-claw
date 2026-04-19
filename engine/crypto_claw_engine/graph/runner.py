@@ -1,3 +1,10 @@
+"""
+Engine runner — DAG-based parallel execution.
+
+Layer 0 (parallel): Technicals + Derivatives + TailRisk + Reflection
+Layer 1 (parallel): BullResearcher + BearResearcher
+Layer 2: PortfolioManager (final decision)
+"""
 import uuid
 from datetime import datetime, timezone
 
@@ -6,11 +13,12 @@ from crypto_claw_engine.agents.derivatives import DerivativesAgent
 from crypto_claw_engine.agents.portfolio_manager import PortfolioManagerAgent
 from crypto_claw_engine.agents.tail_risk import TailRiskAgent
 from crypto_claw_engine.agents.technicals import TechnicalsAgent
+from crypto_claw_engine.agents.reflection import ReflectionAgent
+from crypto_claw_engine.agents.debate import BullResearcher, BearResearcher
 from crypto_claw_engine.data.base import DerivSource, PriceSource
+from crypto_claw_engine.graph.dag_runner import DAGRunner
 from crypto_claw_engine.llm import LLMClient
 from crypto_claw_engine.models import RunRequest, RunResult
-
-TIER_A_AGENTS = [TechnicalsAgent(), DerivativesAgent(), TailRiskAgent()]
 
 
 def _fetch_ohlcv(price_source: PriceSource, universe: list[str]) -> dict[str, list]:
@@ -48,14 +56,16 @@ def run_engine(
         llm=llm,
     )
 
-    signals = []
-    failed: list[str] = []
-    for agent in TIER_A_AGENTS:
-        try:
-            signals.extend(agent.run(ctx))
-        except Exception:
-            failed.append(agent.name)
+    # DAG execution: layer 0 → layer 1 → layer 2
+    agents_by_layer = {
+        0: [TechnicalsAgent(), DerivativesAgent(), TailRiskAgent(), ReflectionAgent()],
+        1: [BullResearcher(), BearResearcher()],
+    }
 
+    dag = DAGRunner(max_workers=4)
+    signals, failed = dag.run_agents(agents_by_layer, ctx)
+
+    # Layer 2: Portfolio Manager (needs all signals + debate results)
     pm_ctx = AgentContext(
         request=request,
         data={"upstream_signals": signals},

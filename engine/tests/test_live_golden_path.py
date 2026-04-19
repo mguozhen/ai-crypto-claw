@@ -19,7 +19,7 @@ def test_live_btc_eth_run_produces_decisions():
 
     assert len(result.decisions) == 2
     assert {d.asset for d in result.decisions} == {"BTC", "ETH"}
-    assert len(result.signals) == 6
+    assert len(result.signals) >= 6  # 6 original + reflection + bull/bear per asset
     live_conf_signals = [s for s in result.signals if s.confidence > 0]
     assert len(live_conf_signals) >= 2
     assert not result.agents_failed

@@ -1,0 +1,142 @@
+2026-04-18 22:38:08,067 [INFO] server: Server started
+2026-04-18 22:38:08,067 [INFO] server: Trading loop started
+2026-04-18 22:38:18,057 [INFO] server: 🤖 AI: risk=MEDIUM | Both BTC and ETH are showing mild short-term weakness, but current prices remain well within existing grid ranges. Unless downside momentum accelerates over the next 1-2 sessions, the present grids are still appropriate for range-based trading.
+2026-04-18 22:38:27,966 [INFO] strategies.dca: [DCA acct:1][BTC/USDT] Buying $10 @ $76,229.70
+2026-04-18 22:38:28,826 [INFO] strategies.dca: [DCA acct:1][ETH/USDT] Buying $6 @ $2,358.58
+2026-04-18 22:54:01,775 [INFO] server: 🤖 AI: risk=MEDIUM | Both BTC and ETH are seeing mild short-term weakness, but current prices remain centered enough within their existing grid bands to continue range-based trading. Momentum is soft, so monitor for a deeper breakdown if selling accelerates over the next 24-48 hours.
+2026-04-18 23:02:29,333 [INFO] server: Server started
+2026-04-18 23:02:29,333 [INFO] server: Trading loop started
+2026-04-18 23:02:40,582 [INFO] server: 🤖 AI: risk=MEDIUM | Both BTC and ETH are seeing mild short-term pullbacks but remain inside broad established trading ranges. The market looks cautiously bearish in the near term, yet still suitable for grid trading unless volatility expands sharply downward.
+2026-04-18 23:18:25,191 [INFO] server: 🤖 AI: risk=MEDIUM | Both BTC and ETH are seeing mild short-term weakness, but current declines do not yet justify pausing or resetting the grids since prices remain within established ranges. Near-term conditions favor cautious range trading unless selling accelerates and pushes prices toward the lower bounds.
+2026-04-18 23:34:00,492 [INFO] server: 🤖 AI: risk=MEDIUM | Both BTC and ETH are seeing mild short-term pullbacks within established ranges. The market outlook is cautiously neutral to slightly bearish unless selling pressure accelerates further.
+2026-04-18 23:49:36,163 [INFO] server: 🤖 AI: risk=MEDIUM | Both BTC and ETH are seeing mild-to-moderate short-term weakness, but neither has broken outside its active grid structure. Near-term conditions favor cautious range trading unless downside momentum accelerates.
+2026-04-19 00:05:18,791 [INFO] server: 🤖 AI: risk=MEDIUM | Both BTC and ETH are experiencing a short-term pullback, but neither is close to breaking current grid boundaries. Near-term conditions favor maintaining the grid unless downside momentum accelerates and prices approach the lower bands.
+2026-04-19 00:20:58,940 [INFO] server: 🤖 AI: risk=MEDIUM | Both BTC and ETH are seeing moderate downside pressure, but current moves look like a normal risk-off pullback rather than a breakdown beyond grid structure. Maintain the grids for now while watching for continued weakness that pushes price closer to lower bounds.
+2026-04-19 00:36:36,299 [INFO] server: 🤖 AI: risk=MEDIUM | Both BTC and ETH are experiencing a mild risk-off pullback, but current prices remain near the middle of their existing grid bands. This favors maintaining the grid unless downside momentum accelerates and price approaches the lower bounds.
+2026-04-19 00:52:12,105 [INFO] server: 🤖 AI: risk=MEDIUM | Both BTC and ETH are seeing short-term pullbacks, but prices remain centered within their active grid ranges. The market looks cautiously bearish in the near term, though not yet disorderly enough to pause grid trading.
+2026-04-19 01:07:48,474 [INFO] server: 🤖 AI: risk=MEDIUM | Both BTC and ETH are under short-term selling pressure, with ETH showing relative weakness. The broader tone looks corrective rather than panic-driven, so grid trading remains viable but should be monitored closely for further downside acceleration.
+2026-04-19 01:23:21,388 [INFO] server: 🤖 AI: risk=MEDIUM | Both BTC and ETH are seeing mild short-term weakness, but prices remain comfortably inside their active grid bands. The market looks cautiously bearish in the near term, yet still suitable for grid trading unless downside momentum accelerates.
+2026-04-19 01:38:49,504 [INFO] server: 🤖 AI: risk=MEDIUM | Both BTC and ETH show mild short-term weakness, but the pullback is not severe enough to justify pausing or resetting the grids. The market appears to be in a normal corrective phase where range trading strategies can still perform, though downside volatility should be monitored.
+2026-04-19 01:54:18,090 [INFO] server: 🤖 AI: risk=MEDIUM | BTC and ETH are seeing mild downside pressure, but both remain inside their existing grid ranges. Current conditions favor continuing range-trading unless losses accelerate and price approaches the lower bounds.
+2026-04-19 02:09:58,070 [INFO] server: 🤖 AI: risk=MEDIUM | Both BTC and ETH are showing mild short-term weakness, but current prices remain well within existing grid bands. The market looks range-bound with a slightly bearish near-term bias rather than in a panic or breakout phase.
+2026-04-19 02:25:28,632 [INFO] server: 🤖 AI: risk=MEDIUM | Both BTC and ETH are showing mild short-term bearish pressure, but prices remain comfortably inside existing grid bands. The current setup is still suitable for range-based trading unless downside momentum accelerates further.
+2026-04-19 02:41:01,057 [INFO] server: 🤖 AI: risk=MEDIUM | Both BTC and ETH are seeing short-term bearish pressure, but current moves appear to be corrective rather than extreme. A neutral-to-cautious outlook is appropriate, with grid trading still suitable as long as price remains within established ranges.
+2026-04-19 02:56:31,819 [INFO] server: 🤖 AI: risk=MEDIUM | Both BTC and ETH are experiencing mild short-term downside pressure, but current prices remain centered within existing grid ranges. Unless volatility expands sharply or support levels fail, maintaining the present grid setup is reasonable.
+2026-04-19 03:12:30,375 [INFO] server: 🤖 AI: risk=MEDIUM | Both BTC and ETH are showing mild short-term weakness, but current prices remain centered within their active grid bands. The market appears range-capable rather than in a confirmed breakdown, though downside pressure should be monitored if losses accelerate.
+2026-04-19 03:28:03,316 [INFO] server: 🤖 AI: risk=MEDIUM | Both BTC and ETH are seeing mild short-term pullbacks but remain well inside their configured grid ranges. The market looks corrective rather than disorderly, so maintaining the current grid is reasonable while monitoring for a deeper breakdown.
+2026-04-19 03:43:34,294 [INFO] server: 🤖 AI: risk=MEDIUM | Both BTC and ETH are under short-term selling pressure, but prices remain well within their active grid ranges. The market looks corrective rather than broken, so maintaining the grid is appropriate while monitoring for acceleration in downside momentum.
+2026-04-19 03:59:07,225 [INFO] server: 🤖 AI: risk=MEDIUM | Both BTC and ETH are experiencing a mild pullback, but current prices remain within established grid boundaries, supporting continued range trading for now. Watch for stronger downside momentum if selling accelerates over the next 12-24 hours.
+2026-04-19 04:14:49,157 [INFO] server: 🤖 AI: risk=MEDIUM | Both BTC and ETH are showing short-term bearish pressure, but price action remains contained within existing grid bands. The current setup still supports mean-reversion trading unless downside momentum accelerates further.
+2026-04-19 04:30:21,426 [INFO] server: 🤖 AI: risk=MEDIUM | Both BTC and ETH are seeing mild short-term weakness, but current moves do not yet suggest a breakdown beyond the active grid ranges. A neutral-to-cautious outlook is appropriate unless selling accelerates and prices approach lower grid boundaries.
+2026-04-19 04:45:55,795 [INFO] server: 🤖 AI: risk=MEDIUM | Both BTC and ETH are seeing mild short-term weakness, but current prices remain well inside their active grid bands. The market appears range-capable rather than in panic mode, so maintaining the grid is reasonable while monitoring for a deeper momentum breakdown.
+2026-04-19 05:01:30,333 [INFO] server: 🤖 AI: risk=MEDIUM | Both BTC and ETH are seeing mild short-term weakness, but current moves look like normal pullbacks rather than a breakdown from the existing trading ranges. Grid trading can continue, though downside momentum should be monitored in case declines accelerate.
+2026-04-19 05:17:08,609 [INFO] server: 🤖 AI: risk=MEDIUM | Both BTC and ETH are seeing short-term pullbacks, but prices remain well inside their active grid ranges. Near-term conditions look choppy to mildly bearish, favoring continued range trading unless downside momentum accelerates.
+2026-04-19 05:32:52,438 [INFO] server: 🤖 AI: risk=MEDIUM | Both BTC and ETH are seeing modest downside pressure, but prices are still centered within their active grid ranges. The current setup remains suitable unless selling accelerates and price approaches the lower bands.
+2026-04-19 05:48:32,455 [INFO] server: 🤖 AI: risk=MEDIUM | Both BTC and ETH are in a short-term pullback, but current prices remain near the middle of their active grid ranges. Range trading conditions are still intact unless downside momentum accelerates and begins testing lower bounds.
+2026-04-19 06:04:04,521 [INFO] server: 🤖 AI: risk=MEDIUM | Both BTC and ETH are seeing moderate short-term weakness, but prices remain centered within their active grid ranges. Unless downside momentum accelerates, maintaining current grids is appropriate to harvest choppy market movement.
+2026-04-19 06:19:43,364 [INFO] server: 🤖 AI: risk=MEDIUM | Both BTC and ETH are showing short-term bearish pressure, but price is still trading mid-range within existing grids. Unless downside momentum accelerates and threatens lower bounds, the current grid structure remains suitable for continued range trading.
+2026-04-19 06:35:12,716 [INFO] server: 🤖 AI: risk=MEDIUM | Both BTC and ETH are seeing short-term pullbacks, but prices remain comfortably inside their active grid ranges. Current conditions favor maintaining the grid while monitoring for stronger downside continuation or a volatility spike.
+2026-04-19 06:50:43,332 [INFO] server: 🤖 AI: risk=MEDIUM | Both BTC and ETH are in a short-term pullback, with ETH showing relatively weaker performance. Market conditions still favor grid trading, but a more defensive posture is warranted if downside momentum continues.
+2026-04-19 07:06:13,490 [INFO] server: 🤖 AI: risk=MEDIUM | Both BTC and ETH are showing mild short-term weakness, but current prices remain centered within their existing grid bands. This favors maintaining the strategy unless downside momentum accelerates and pushes price closer to the lower bounds.
+2026-04-19 07:22:00,279 [INFO] server: 🤖 AI: risk=MEDIUM | Both BTC and ETH are experiencing moderate short-term weakness, but prices are still trading near the middle of their active grid bands. A range-bound but slightly bearish environment favors keeping the grids active unless downside momentum accelerates.
+2026-04-19 07:33:46,729 [ERROR] strategies.grid: Grid error acct:1 BTC/USDT: okx GET https://www.okx.com/api/v5/asset/currencies
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.12/site-packages/urllib3/connection.py", line 204, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.12/site-packages/urllib3/util/connection.py", line 60, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.12/3.12.13/Frameworks/Python.framework/Versions/3.12/lib/python3.12/socket.py", line 978, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+socket.gaierror: [Errno 8] nodename nor servname provided, or not known
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.12/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.12/site-packages/urllib3/connectionpool.py", line 488, in _make_request
+    raise new_e
+  File "/opt/homebrew/lib/python3.12/site-packages/urllib3/connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "/opt/homebrew/lib/python3.12/site-packages/urllib3/connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "/opt/homebrew/lib/python3.12/site-packages/urllib3/connection.py", line 759, in connect
+    self.sock = sock = self._new_conn()
+                       ^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.12/site-packages/urllib3/connection.py", line 211, in _new_conn
+    raise NameResolutionError(self.host, self, e) from e
+urllib3.exceptions.NameResolutionError: HTTPSConnection(host='www.okx.com', port=443): Failed to resolve 'www.okx.com' ([Errno 8] nodename nor servname provided, or not known)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.12/site-packages/requests/adapters.py", line 645, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.12/site-packages/urllib3/connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.12/site-packages/urllib3/util/retry.py", line 535, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='www.okx.com', port=443): Max retries exceeded with url: /api/v5/asset/currencies (Caused by NameResolutionError("HTTPSConnection(host='www.okx.com', port=443): Failed to resolve 'www.okx.com' ([Errno 8] nodename nor servname provided, or not known)"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.12/site-packages/ccxt/base/exchange.py", line 662, in fetch
+    response = self.session.request(
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.12/site-packages/requests/sessions.py", line 592, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.12/site-packages/requests/sessions.py", line 706, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.12/site-packages/requests/adapters.py", line 678, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='www.okx.com', port=443): Max retries exceeded with url: /api/v5/asset/currencies (Caused by NameResolutionError("HTTPSConnection(host='www.okx.com', port=443): Failed to resolve 'www.okx.com' ([Errno 8] nodename nor servname provided, or not known)"))
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/hunter/ai-crypto-claw/trading/strategies/grid.py", line 134, in run_grid
+    if check_stop_loss(ex, config, account_id):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hunter/ai-crypto-claw/trading/strategies/grid.py", line 115, in check_stop_loss
+    price = exchange.get_ticker_price(ex, symbol)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/hunter/ai-crypto-claw/trading/utils/exchange.py", line 59, in get_ticker_price
+    ticker = exchange.fetch_ticker(symbol)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.12/site-packages/ccxt/okx.py", line 2171, in fetch_ticker
+    self.load_markets()
+  File "/opt/homebrew/lib/python3.12/site-packages/ccxt/base/exchange.py", line 1831, in load_markets
+    currencies = self.fetch_currencies()
+                 ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.12/site-packages/ccxt/okx.py", line 1927, in fetch_currencies
+    response = self.privateGetAssetCurrencies(params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.12/site-packages/ccxt/base/types.py", line 35, in unbound_method
+    return _self.request(self.path, self.api, self.method, params, config=self.config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.12/site-packages/ccxt/base/exchange.py", line 5364, in request
+    return self.fetch2(path, api, method, params, headers, body, config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.12/site-packages/ccxt/base/exchange.py", line 5358, in fetch2
+    raise e
+  File "/opt/homebrew/lib/python3.12/site-packages/ccxt/base/exchange.py", line 5348, in fetch2
+    return self.fetch(request['url'], request['method'], request['headers'], request['body'])
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.12/site-packages/ccxt/base/exchange.py", line 718, in fetch
+    raise NetworkError(details) from e
+ccxt.base.errors.NetworkError: okx GET https://www.okx.com/api/v5/asset/currencies
+2026-04-19 07:37:58,681 [INFO] server: 🤖 AI: risk=MEDIUM | Both BTC and ETH are seeing mild short-term weakness but remain well inside their configured ranges, which supports continuing a neutral range-trading approach. Unless downside momentum accelerates, the current grids should remain effective for capturing volatility.
+2026-04-19 07:53:55,942 [INFO] server: 🤖 AI: risk=MEDIUM | Both BTC and ETH are showing mild short-term weakness, but current moves look like routine pullbacks rather than a breakdown from the existing trading ranges. Grid trading remains suitable unless downside momentum accelerates and prices start testing the lower bands.
+2026-04-19 08:09:40,663 [INFO] server: 🤖 AI: risk=MEDIUM | Both BTC and ETH are seeing mild downside pressure, but current moves do not yet suggest a breakdown outside existing grid structures. The market appears range-capable with slightly bearish short-term momentum, so maintaining grids while monitoring for further weakness is appropriate.
+2026-04-19 08:25:11,502 [INFO] server: 🤖 AI: risk=MEDIUM | BTC and ETH are both seeing mild downside pressure over the last 24 hours, but prices remain centered within their existing grid ranges. The market looks soft but still range-bound, favoring continued grid operation unless selling accelerates.
+2026-04-19 08:40:46,688 [INFO] server: 🤖 AI: risk=MEDIUM | Both BTC and ETH are showing mild short-term weakness, but not enough to invalidate the current grid ranges. Unless downside momentum accelerates toward the lower bounds, maintaining the active grids is appropriate for continued range-based trading.

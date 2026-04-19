@@ -50,7 +50,7 @@ def test_run_engine_end_to_end_produces_decisions():
 
     assert result.run_id
     assert len(result.decisions) == 1
-    assert len(result.signals) == 3
+    assert len(result.signals) >= 3  # 3 original + reflection + bull/bear debate
     assert not result.agents_failed
 
 
