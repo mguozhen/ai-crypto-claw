@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["TODO_APPLE_TEAM_ID.ai.btcmind.app"],
+        "components": [
+          { "/": "/auth/verify*", "comment": "Magic-link sign-in" },
+          { "/": "/app/*", "comment": "Mobile-targeted deep links" }
+        ]
+      }
+    ]
+  }
+}
