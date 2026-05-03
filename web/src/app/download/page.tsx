@@ -98,6 +98,7 @@ export default function DownloadPage() {
             <PlatformCard
               title="Android"
               subtitle={t("download.android.subtitle")}
+              qr={ANDROID_APK_URL ? { src: "/android-apk-qr.png", caption: t("download.android.qrCaption") } : undefined}
               primary={
                 ANDROID_APK_URL
                   ? { label: t("download.android.primary"), href: ANDROID_APK_URL }
@@ -143,12 +144,14 @@ export default function DownloadPage() {
 function PlatformCard({
   title,
   subtitle,
+  qr,
   primary,
   secondary,
   note,
 }: {
   title: string;
   subtitle: string;
+  qr?: { src: string; caption: string };
   primary: { label: string; href: string; disabled?: boolean };
   secondary?: { label: string; href: string };
   note: string;
@@ -159,6 +162,21 @@ function PlatformCard({
         <h3 className="text-2xl font-bold text-white">{title}</h3>
       </div>
       <p className="text-sm text-zinc-500 mb-6">{subtitle}</p>
+
+      {qr && (
+        <div className="mb-6 flex flex-col items-center gap-2">
+          <div className="bg-white p-2 rounded-lg">
+            <Image
+              src={qr.src}
+              alt={`${title} QR`}
+              width={140}
+              height={140}
+              unoptimized
+            />
+          </div>
+          <p className="text-xs text-zinc-500">{qr.caption}</p>
+        </div>
+      )}
 
       {primary.disabled ? (
         <button

@@ -77,6 +77,7 @@ export const messages: Record<Locale, Dict> = {
     "download.android.primary": "下载 APK",
     "download.android.primaryDisabled": "构建中…",
     "download.android.secondary": "或安装 Expo Go",
+    "download.android.qrCaption": "Android 用相机或浏览器扫码直接安装",
     "download.android.note":
       "下载 APK 后，允许浏览器安装未知来源应用，再打开 APK 完成安装。首次启动会请求摄像头与麦克风权限。",
     "download.android.noteFallback":
@@ -155,6 +156,7 @@ export const messages: Record<Locale, Dict> = {
     "download.android.primary": "Download APK",
     "download.android.primaryDisabled": "Building…",
     "download.android.secondary": "Or install via Expo Go",
+    "download.android.qrCaption": "Scan with Android camera or browser to install",
     "download.android.note":
       "After download, allow installs from your browser, then open the APK. We'll prompt you for camera + microphone.",
     "download.android.noteFallback":
@@ -235,6 +237,7 @@ export const messages: Record<Locale, Dict> = {
     "download.android.primary": "APK をダウンロード",
     "download.android.primaryDisabled": "ビルド中…",
     "download.android.secondary": "Expo Go をインストール",
+    "download.android.qrCaption": "Android のカメラかブラウザで QR をスキャンしてインストール",
     "download.android.note":
       "ダウンロード後、ブラウザに「不明なソースからのインストール」を許可し、APK を開いてください。初回起動でカメラとマイクの権限を求めます。",
     "download.android.noteFallback":
