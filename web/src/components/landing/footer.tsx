@@ -22,12 +22,20 @@ export function Footer() {
             GitHub
           </a>
           <a
-            href="https://t.me/jingyao04_bot"
+            href="https://t.me/+h1zpoMhqydtjYjVl"
             target="_blank"
             rel="noreferrer"
             className="hover:text-zinc-300 transition"
           >
             Telegram
+          </a>
+          <a
+            href="https://discord.gg/A6s4U5TbS"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-zinc-300 transition"
+          >
+            Discord
           </a>
         </div>
 

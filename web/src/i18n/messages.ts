@@ -22,6 +22,7 @@ export const messages: Record<Locale, Dict> = {
     "nav.pricing": "价格",
     "nav.download": "下载",
     "nav.telegram": "Telegram",
+    "nav.discord": "Discord",
     "nav.login": "登录",
     "nav.getApp": "下载 App",
 
@@ -99,6 +100,7 @@ export const messages: Record<Locale, Dict> = {
     "nav.pricing": "Pricing",
     "nav.download": "Download",
     "nav.telegram": "Telegram",
+    "nav.discord": "Discord",
     "nav.login": "Log in",
     "nav.getApp": "Get the App",
 
@@ -178,6 +180,7 @@ export const messages: Record<Locale, Dict> = {
     "nav.pricing": "料金",
     "nav.download": "ダウンロード",
     "nav.telegram": "Telegram",
+    "nav.discord": "Discord",
     "nav.login": "ログイン",
     "nav.getApp": "アプリ",
 

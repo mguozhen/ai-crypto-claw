@@ -32,12 +32,20 @@ export function Header() {
             {t("nav.download")}
           </a>
           <a
-            href="https://t.me/jingyao04_bot"
+            href="https://t.me/+h1zpoMhqydtjYjVl"
             target="_blank"
             rel="noreferrer"
             className="hover:text-white transition"
           >
             {t("nav.telegram")}
+          </a>
+          <a
+            href="https://discord.gg/A6s4U5TbS"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-white transition"
+          >
+            {t("nav.discord")}
           </a>
         </div>
 

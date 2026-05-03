@@ -20,12 +20,20 @@ export function CTA() {
             {t("cta.button")}
           </a>
           <a
-            href="https://t.me/jingyao04_bot"
+            href="https://t.me/+h1zpoMhqydtjYjVl"
             target="_blank"
             rel="noreferrer"
             className="px-8 py-3.5 rounded-xl border border-zinc-700 text-zinc-300 font-medium hover:border-zinc-500 hover:text-white transition"
           >
             {t("nav.telegram")}
+          </a>
+          <a
+            href="https://discord.gg/A6s4U5TbS"
+            target="_blank"
+            rel="noreferrer"
+            className="px-8 py-3.5 rounded-xl border border-zinc-700 text-zinc-300 font-medium hover:border-zinc-500 hover:text-white transition"
+          >
+            {t("nav.discord")}
           </a>
         </div>
 
